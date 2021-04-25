@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "styles.scss",
+        "_variables.scss",
+        "_general.scss",
+        "_nav.scss",
+        "_searchSection.scss",
+        "_searchResults.scss",
+        "_trendingSection.scss",
+        "_footer.scss",
+        "_maximizeGif.scss",
+        "_favoriteGif.scss",
+        "_createGif.scss",
+        "_myGif.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
