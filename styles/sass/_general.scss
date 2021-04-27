@@ -1,3 +1,14 @@
+// ---------- HOVER ON LINKS ----------
+
+@keyframes nav-links {
+    from {
+        border-color: $Purple;
+    }
+    to {
+        border-color: $Limegreen;
+    }
+}
+
 .search-container {
     align-self: center;
     position: relative;
