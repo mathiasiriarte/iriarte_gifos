@@ -3,4 +3,15 @@
     position: relative;
     width: 34rem;
     display: flex;
+
+    .searchbar {
+        width: 100%;
+        font-family: $Roboto;
+        font-size: 16px;
+        color: $Gray3;
+        border: 1pt solid $Purple;
+        border-radius: 27px;
+        padding: 0.75rem;
+        padding-left: 3.38rem;
+    }
 }
