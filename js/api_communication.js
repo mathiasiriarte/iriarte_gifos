@@ -11,7 +11,7 @@ trendingSearchTags();
 
 //---------- CALL TRENDING SEARCH TAGS ----------
 async function trendingSearchTags() {
-    await fetch(api_trendingSearchTags_endpoint + "api_key=" + generated_api_key)
+    await fetch(api_trendingSearchTags_endpoint + "?api_key=" + generated_api_key)
         .then(response => { return (response.json()) })
         .then(json => {
             console.log(json);
