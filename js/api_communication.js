@@ -7,6 +7,7 @@ const api_trendingGif_endpoint = "https://api.giphy.com/v1/gifs/trending";
 //----- POPULAR SEARCH TAGS -----
 const api_trendingSearchTags_endpoint = "https://api.giphy.com/v1/trending/searches";
 
+trendingSearchTags();
 
 //---------- CALL TRENDING SEARCH TAGS ----------
 async function trendingSearchTags() {
