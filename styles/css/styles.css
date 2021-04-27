@@ -1,0 +1,21 @@
+.search-container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  width: 34rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-container .searchbar {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #9CAFC3;
+  border: 1pt solid #572EE5;
+  border-radius: 27px;
+  padding: 0.75rem;
+  padding-left: 3.38rem;
+}
+/*# sourceMappingURL=styles.css.map */
