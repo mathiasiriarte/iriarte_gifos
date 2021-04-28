@@ -9,6 +9,11 @@
     border-top: 4pt solid $Purple;
     background-color: $White;
 
+    body.dark & {
+        border-top-color: black;
+        background-color: $Gray4;
+    }
+
     &-logo {
         margin-left: $MarginGeneral;
         padding-top: 0.25em;
@@ -37,6 +42,10 @@
             text-decoration: none;
             color: $Purple;
             font-size: 13px;
+
+            body.dark & {
+                color: $White;
+            }
 
             &:hover {
                 animation: nav-links 0.5s ease-in-out;

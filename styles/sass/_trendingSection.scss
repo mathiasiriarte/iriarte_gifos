@@ -1,58 +1,62 @@
-//TRENDING SECTION
+//---------- TRENDING SECTION ----------
 .trending-gifos {
-background-color: $Gray1;
-margin-top: 6rem;
-padding-top: 4rem;
-padding-bottom: 10rem;
-display: flex;
-flex-direction: column;
-align-items: center;
-
-&-h2 {
-    font-family: $Montserrat;
-    font-weight: $Bold;
-    font-size: 25px;
-    color: $Purple;
-}
-
-&-p {
-    font-family: $Roboto;
-    font-weight: $Regular;
-    font-size: 18px;
-    margin-top: 0.75rem;
-}
-
-&-arrow-container {
+    background-color: $Gray1;
+    margin-top: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
-
-    &-button {
-    height: fit-content;
-    &:hover {
-        cursor: pointer;
+    body.dark & {
+        background-color:$Gray5;
     }
+    &-h2 {
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        font-size: 25px;
+        color: $Purple;
+        body.dark & {
+            color: white;
+        }
     }
-
-    &-item {
-    margin-right: 1em;
-    margin-left: 1em;
+    &-p {
+        font-family: $Roboto;
+        font-weight: $Regular;
+        font-size: 18px;
+        margin-top: 0.75rem;
+        body.dark & {
+            color: white;
+        }
     }
-}
-&-gifos-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    .gifoHover{
-    left: 1rem;
+    &-arrow-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+        &-button {
+        height: fit-content;
+        &:hover {
+            cursor: pointer;
+        }
+        }
+        &-item {
+        margin-right: 1em;
+        margin-left: 1em;
+        }
     }
-    img {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    &-gifos-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .gifoHover{
+        left: 1rem;
+        }
+        img {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        }
     }
-}
-
+//---------- MOBILE ----------
 @media screen and (max-width: $Query) {
         .trending-gifos {
         &-h2 {

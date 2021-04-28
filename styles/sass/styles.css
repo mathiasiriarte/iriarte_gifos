@@ -5,6 +5,19 @@
   transition: background-color 1s ease-in-out;
 }
 
+body {
+  background-color: white;
+}
+
+body.dark {
+  background-color: #37383C;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6, body p, body span, body a {
+  -webkit-transition: color 1s ease-in-out;
+  transition: color 1s ease-in-out;
+}
+
 @-webkit-keyframes nav-links {
   from {
     border-color: #572EE5;
@@ -42,6 +55,11 @@
   border-radius: 27px;
   padding: 0.75rem;
   padding-left: 3.38rem;
+}
+
+body.dark .search-container .searchbar {
+  border-color: #9CAFC3;
+  background-color: #37383C;
 }
 
 .search-container .search-icon-purple {
@@ -94,6 +112,11 @@
   background-color: #ffffff;
 }
 
+body.dark .nav {
+  border-top-color: black;
+  background-color: #37383C;
+}
+
 .nav-logo {
   margin-left: 9.75rem;
   padding-top: 0.25em;
@@ -138,6 +161,10 @@
   text-decoration: none;
   color: #572EE5;
   font-size: 13px;
+}
+
+body.dark .nav-container-items-item a {
+  color: #ffffff;
 }
 
 .nav-container-items-item a:hover {
@@ -257,6 +284,10 @@
   color: #50E3C2;
 }
 
+body.dark .search-h1 {
+  color: white;
+}
+
 .search-img {
   width: 27.7%;
   margin-top: 1.5rem;
@@ -271,6 +302,10 @@
   margin-top: 6rem;
 }
 
+body.dark .search-h3 {
+  color: white;
+}
+
 .search-trending-tags {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -278,6 +313,10 @@
   color: #572EE5;
   text-align: center;
   margin-top: 0.5rem;
+}
+
+body.dark .search-trending-tags {
+  color: white;
 }
 
 .search-trending-tags span {
@@ -295,6 +334,10 @@
   -webkit-filter: brightness(2);
           filter: brightness(2);
   border-bottom: 1pt solid #572EE5;
+}
+
+body.dark .search-trending-tags span:hover {
+  border-bottom-color: white;
 }
 
 @media screen and (max-width: 800px) {
@@ -339,6 +382,10 @@
           align-items: center;
 }
 
+body.dark .trending-gifos {
+  background-color: #222326;
+}
+
 .trending-gifos-h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -346,11 +393,19 @@
   color: #572EE5;
 }
 
+body.dark .trending-gifos-h2 {
+  color: white;
+}
+
 .trending-gifos-p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   margin-top: 0.75rem;
+}
+
+body.dark .trending-gifos-p {
+  color: white;
 }
 
 .trending-gifos-arrow-container {
@@ -437,6 +492,10 @@
   border-bottom: 4pt solid #572EE5;
 }
 
+body.dark .footer {
+  border-bottom-color: black;
+}
+
 .footer-share {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,6 +510,10 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
+}
+
+body.dark .footer-share p {
+  color: white;
 }
 
 .footer-share-buttons {
@@ -477,6 +540,10 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 13px;
+}
+
+body.dark .footer-copyright {
+  color: white;
 }
 
 @media screen and (max-width: 800px) {

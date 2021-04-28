@@ -3,7 +3,6 @@
     flex-direction: column;
     margin-top: 9rem;
     align-items: center;
-
     &-h1 {
         font-family: $Montserrat;
         font-size: 35px;
@@ -13,13 +12,14 @@
         &-span {
             color: $Limegreen;
         }
-
+        body.dark & {
+            color: white;
+        }
     }
     &-img {
         width: 27.7%;
         margin-top: 1.5rem;
     }
-
     &-h3 {
         font-family: $Montserrat;
         font-weight: $Bold;
@@ -27,8 +27,10 @@
         color: $Purple;
         text-align: center;
         margin-top: 6rem;
+        body.dark & {
+            color: white;
+        }
     }
-
     &-trending-tags {
         font-family: $Montserrat;
         font-weight: $Medium;
@@ -36,7 +38,9 @@
         color: $Purple;
         text-align: center;
         margin-top: 0.5rem;
-
+        body.dark & {
+            color: white;
+        }
         span {
             text-transform: capitalize;
             line-height: 2em;
@@ -48,11 +52,14 @@
                 cursor: pointer;
                 filter: brightness(2);
                 border-bottom: 1pt solid $Purple;
+                body.dark & {
+                    border-bottom-color: white;
+                }
             }
         }
     }
 }
-
+//---------- MOBILE ----------
 @media screen and (max-width: $Query) {
     .search {
         margin-left: 0;

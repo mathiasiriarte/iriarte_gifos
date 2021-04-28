@@ -4,6 +4,16 @@
     transition: background-color 1s ease-in-out;
 }
 
+body {
+    background-color: white;
+    &.dark {
+        background-color:#37383C;
+    }
+    h1, h2, h3, h4, h5, h6, p, span, a {
+        transition: color 1s ease-in-out;
+    }
+}
+
 @import "variables";
 @import "general";
 @import "nav";

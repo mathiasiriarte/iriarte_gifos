@@ -4,18 +4,21 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 4pt solid $Purple;
-
+    body.dark & {
+        border-bottom-color: black;
+    }
     &-share {
         display: flex;
         justify-content: space-evenly;
         margin-left: $MarginGeneral;
-
     p {
         font-family: $Roboto;
         font-weight: $Regular;
         font-size: 13px;
+        body.dark & {
+            color: white;
+        }
     }
-
     &-buttons {
         margin-left: 0.75em;
         margin-right: 0.75em;
@@ -29,15 +32,16 @@
         }
     }
 }
-
     &-copyright {
         margin-right: $MarginGeneral;
         font-family: $Roboto;
         font-weight: $Regular;
         font-size: 13px;
+        body.dark & {
+            color: white;
+        }
     }
 }
-
 //---------- MOBILE ---------
 @media screen and (max-width: 800px) {
     .footer {
