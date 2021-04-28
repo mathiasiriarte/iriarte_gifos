@@ -1,0 +1,75 @@
+.search {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9rem;
+    align-items: center;
+
+    &-h1 {
+        font-family: $Montserrat;
+        font-size: 35px;
+        color: $Purple;
+        text-align: center;
+        width: 40%;
+        &-span {
+            color: $Limegreen;
+        }
+
+    }
+    &-img {
+        width: 27.7%;
+        margin-top: 1.5rem;
+    }
+
+    &-h3 {
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        font-size: 18px;
+        color: $Purple;
+        text-align: center;
+        margin-top: 6rem;
+    }
+
+    &-trending-tags {
+        font-family: $Montserrat;
+        font-weight: $Medium;
+        font-size: 16px;
+        color: $Purple;
+        text-align: center;
+        margin-top: 0.5rem;
+
+        span {
+            text-transform: capitalize;
+            line-height: 2em;
+            &::after {
+                content: ",  ";
+                white-space: pre;
+            }
+            &:hover {
+                cursor: pointer;
+                filter: brightness(2);
+                border-bottom: 1pt solid $Purple;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $Query) {
+    .search {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 8.75rem;
+        width: 100%;
+        &-h1 {
+            font-size: 25px;
+            width: 75%;
+            align-self: center;
+        }
+        &-trending-tags{
+            font-size: 15px;
+        }
+        &-img {
+            width: 75%;
+            align-self: center;
+        }
+    }
+}
