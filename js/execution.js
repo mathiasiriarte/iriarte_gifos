@@ -171,7 +171,7 @@ function addTrendingGifs(array) {
 }
 
 function postTrendingGifs(offset) {
-    trendingGifsContainer.innerHTML = "";
+    trendingGifs_container.innerHTML = "";
     for (let i = offset; i < offset + 3; i++) {
         gifContainer = document.createElement("div");
         gifContainer.classList.add("gifo");
@@ -186,7 +186,7 @@ function postTrendingGifs(offset) {
                 <p class="gif-user">${trendingGifs_array[i].author}</p>
                 <p class="gif-title">${trendingGifs_array[i].title}</p>
             </div>`;
-        trendingGifsContainer.appendChild(gifContainer);
+        trendingGifs_container.appendChild(gifContainer);
         gifEventListeners(gifContainer);
         addGifButtons(gifContainer);
     }
