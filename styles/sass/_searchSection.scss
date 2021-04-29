@@ -44,6 +44,10 @@
         span {
             text-transform: capitalize;
             line-height: 2em;
+            background: linear-gradient(to top, $Purple 50%, $White 50%);
+            background-size: 100% 200%;
+            background-position: top left;
+            transition: all .3s ease-out;
             &::after {
                 content: ",  ";
                 white-space: pre;
@@ -51,7 +55,8 @@
             &:hover {
                 cursor: pointer;
                 filter: brightness(2);
-                border-bottom: 1pt solid $Purple;
+                background-position: bottom left;
+                color: $White;
                 body.dark & {
                     border-bottom-color: white;
                 }

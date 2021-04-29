@@ -322,6 +322,12 @@ body.dark .search-trending-tags {
 .search-trending-tags span {
   text-transform: capitalize;
   line-height: 2em;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #572EE5), color-stop(50%, #ffffff));
+  background: linear-gradient(to top, #572EE5 50%, #ffffff 50%);
+  background-size: 100% 200%;
+  background-position: top left;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .search-trending-tags span::after {
@@ -333,7 +339,8 @@ body.dark .search-trending-tags {
   cursor: pointer;
   -webkit-filter: brightness(2);
           filter: brightness(2);
-  border-bottom: 1pt solid #572EE5;
+  background-position: bottom left;
+  color: #ffffff;
 }
 
 body.dark .search-trending-tags span:hover {
