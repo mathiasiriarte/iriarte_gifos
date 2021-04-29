@@ -101,43 +101,43 @@ favorites_link.addEventListener("click", () => {
 retrieveFavs();
 })
 
-function generateTagListeners() {
+function addTagListeners() {
     for (let i = 0; i < 5; i++) {
     popular_tags.querySelectorAll(".trending-tag")[i].addEventListener("click", () => {
         input_search.value = popular_tags.querySelectorAll(".trending-tag")[i].innerHTML;
         searchBar_nav.value = popular_tags.querySelectorAll(".trending-tag")[i].innerHTML;
-        searchStart();
+        startSearch();
     })
     }
 }
 //------------------ SEARCH ------------------
 //---------- TRIGGER SEARCH ON INPUT ----------
 input_search.addEventListener("input", () => { suggest(input_search.value) })
-searchIcon_purple.addEventListener("click", () => { searchStart() });
+searchIcon_purple.addEventListener("click", () => { startSearch() });
 input_search.addEventListener("keypress", (input) => {
     if (input.charCode === 13) {
-        searchStart()
+        startSearch()
     }
 });
 //----- NAVBAR -----
 nav_purple_magnifyingGlass.addEventListener("click", () => {
     input_search.value = searchBar_nav.value;
-    searchStart();
+    startSearch();
 });
 searchBar_nav.addEventListener("keypress", (input) => {
     if (input.charCode === 13) {
         input_search.value = searchBar_nav.value;
-        searchStart();
+        startSearch();
     }
 });
 
-input_search.addEventListener("focus", () => { searchActive() });
-searchIcon_gray.addEventListener("click", () => { searchStart() });
+input_search.addEventListener("focus", () => { searching() });
+searchIcon_gray.addEventListener("click", () => { startSearch() });
 cancel_search.addEventListener("click", () => { searchDisable(); input_search.value = ""; searchBar_nav.value = ""; SearchSection.innerHTML = ""; });
 
 nav_gray_magnifyingGlass.addEventListener("click", () => {
     input_search.value = searchBar_nav.value;
-    searchStart();
+    startSearch();
 });
 nav_search_close.addEventListener("click", () => { searchDisable(); input_search.value = ""; searchBar_nav.value = ""; SearchSection.innerHTML = ""; });
 
@@ -226,3 +226,17 @@ instagram.addEventListener("mouseout", () => {
         instagram.src = "imgs/icon_instagram_noc.svg"
     }
 });
+
+function GIFINFO(index, author, title, url) {
+    this.index = index;
+    this.author = author;
+    if (this.author == "") {
+        this.author = "Anónimo";
+    }
+    this.title = title;
+    if (this.title == "") {
+        this.title = "Sin título";
+    }
+    this.url = url;
+    return this;
+}
