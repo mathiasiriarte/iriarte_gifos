@@ -94,6 +94,189 @@ body.dark .search-container .searchbar {
   top: 35%;
 }
 
+.autocomplete {
+  width: 33.8rem;
+  border: 1pt solid #572EE5;
+  border-top: none;
+  border-radius: 0 0 27px 27px;
+  list-style: none;
+  opacity: 60%;
+}
+
+body.dark .autocomplete {
+  color: white;
+  border-color: gray;
+}
+
+.autocomplete li {
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+}
+
+.autocomplete li p {
+  display: inline;
+  padding-left: 1rem;
+}
+
+.autocomplete li:last-of-type {
+  border-radius: 0 0 27px 27px;
+  border-bottom: none;
+}
+
+.autocomplete li:hover {
+  background-color: rgba(173, 173, 173, 0.698);
+  cursor: pointer;
+}
+
+.nav-search-container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  width: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-search-container .nav-search-bar {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #9CAFC3;
+  border: 1pt solid #572EE5;
+  border-radius: 27px;
+  padding: 0.75rem;
+  padding-left: 3.38rem;
+}
+
+body.dark .nav-search-container .nav-search-bar {
+  border-color: #9CAFC3;
+  background-color: #37383C;
+}
+
+.nav-search-container .nav-search-bar:focus {
+  color: 900;
+  outline: none;
+}
+
+.nav-search-container .nav-searchIcon-purple {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  width: 1.2em;
+}
+
+.nav-search-container .nav-searchIcon-purple:hover {
+  cursor: pointer;
+}
+
+.nav-search-container .nav-searchIcon-gray {
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  -webkit-filter: brightness(4);
+          filter: brightness(4);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  z-index: 8;
+}
+
+.nav-search-container .nav-searchIcon-gray:hover {
+  cursor: pointer;
+}
+
+.nav-search-container .nav-searchIcon-close {
+  position: absolute;
+  right: 5.25%;
+  top: 35%;
+}
+
+.gifU {
+  position: relative;
+}
+
+.gifU img {
+  width: 22rem;
+  height: 17rem;
+}
+
+.gifU .gifHover {
+  width: 22rem;
+  height: 17rem;
+  position: absolute;
+  top: 0;
+  z-index: 8;
+  background-color: #562ee5b2;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.gifU .gifHover p {
+  position: absolute;
+  left: 1rem;
+}
+
+.gifU .gifHover .gif-user {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  bottom: 4rem;
+}
+
+.gifU .gifHover .gif-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  bottom: 2rem;
+  max-height: 1em;
+  line-height: 1.2em;
+}
+
+.gifU .gifHover .gif-buttonbar {
+  position: absolute;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.gifU .gifHover .gif-buttonbar img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}
+
+.gifU .gifHover .gif-buttonbar img:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .search-container {
+    width: 90%;
+  }
+  .autocomplete {
+    width: 89%;
+  }
+  .gifU img {
+    width: 15rem;
+    height: 11rem;
+  }
+  .gifU .gifHover {
+    display: none;
+  }
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -177,7 +360,7 @@ body.dark .nav-container-items-item a {
   color: #9CAFC3;
 }
 
-.nav-container-burger {
+.nav-container-hamburger {
   display: none;
 }
 
@@ -202,17 +385,17 @@ body.dark .nav-container-items-item a {
   .nav {
     height: 4rem;
   }
-  .nav_logo {
+  .nav-logo {
     margin-left: 1.38rem;
     padding-bottom: 1rem;
     width: 30px;
   }
-  .nav_container hr {
+  .nav-container hr {
     display: block;
     color: #37383C;
     width: 16%;
   }
-  .nav_container_items {
+  .nav-container-items {
     display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -233,7 +416,7 @@ body.dark .nav-container-items-item a {
     background-color: #572EE5;
     opacity: 90%;
   }
-  .nav_container_items li {
+  .nav-container-items li {
     margin-top: 1.38rem;
     margin-bottom: 1.38rem;
     width: 100%;
@@ -244,15 +427,15 @@ body.dark .nav-container-items-item a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .nav_container_items li a {
+  .nav-container-items li a {
     color: #ffffff;
     font-size: 15px;
     border-bottom: #ffffff;
   }
-  .nav_container_button_container {
+  .nav-container-button-container {
     display: none;
   }
-  .nav_container_burger {
+  .nav-container-hamburger {
     display: block;
     margin-right: 1.38rem;
   }

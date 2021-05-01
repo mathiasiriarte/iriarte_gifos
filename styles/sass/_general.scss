@@ -95,14 +95,14 @@
         width: 100%;
         font-family: $Roboto;
         font-size: 16px;
-        color: $SemiLightGray;
+        color: $Gray3;
         border: 1pt solid $Purple;
         border-radius: 27px;
         padding: 0.75rem;
         padding-left: 3.38rem;
         body.dark & {
-            border-color: $SemiLightGray;
-            background-color: $Gray;
+            border-color: $Gray3;
+            background-color: $Gray4;
         }
         &:focus {
             color: $Black;
