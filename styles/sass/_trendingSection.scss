@@ -34,47 +34,47 @@
         align-items: center;
         margin-top: 4rem;
         &-button {
-        height: fit-content;
-        &:hover {
-            cursor: pointer;
-        }
+            height: fit-content;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &-item {
-        margin-right: 1em;
-        margin-left: 1em;
+            margin-right: 1em;
+            margin-left: 1em;
         }
     }
     &-gifos-container {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        .gifoHover{
-        left: 1rem;
+        .gifHover{
+            left: 1rem;
         }
         img {
-        margin-left: 1rem;
-        margin-right: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
     }
 //---------- MOBILE ----------
 @media screen and (max-width: $Query) {
         .trending-gifos {
-        &-h2 {
-            font-size: 20px;
-        }
-        &-p {
-            font-size: 16px;
-            width: 75%;
-            text-align: center;
-        }
-        &-arrow-container {
-            overflow-x: scroll;
-            width: 100vw;
-            justify-content: flex-start;
-            #leftArrow{
-            display: none;
+            &-h2 {
+                font-size: 20px;
             }
-        }
+            &-p {
+                font-size: 16px;
+                width: 75%;
+                text-align: center;
+            }
+            &-arrow-container {
+                overflow-x: scroll;
+                width: 100vw;
+                justify-content: flex-start;
+                #leftArrow{
+                display: none;
+                }
+            }
         }
     }
 }

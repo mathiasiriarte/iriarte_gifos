@@ -1,0 +1,109 @@
+.search-results {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    hr {
+        color: $Gray4;
+        width: 12rem;
+        margin-top: 3.5rem;
+    }
+    h3 {
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        font-size: 35px;
+        color: $Purple;
+        justify-self: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 5rem;
+        margin-bottom: 3.5rem;
+        text-transform: capitalize;
+        body.dark & {
+            color: white;
+        }
+    }
+
+    .no-result {
+        font-weight: $Bold;
+        color: $Limegreen;
+        font-size: 22px;
+        text-transform: none;
+    }
+    .gifU {
+        width: fit-content;
+        padding: 0.75em;
+        .gifHover {
+            top: 0.8em;
+            left: 0.75em;
+        }
+    }
+}
+
+
+
+.see-more {
+    font-family: $Montserrat;
+    font-weight: $Bold;
+    font-size: 13px;
+    color: $Purple;
+    background-color: $White;
+    border: 1pt solid $Purple;
+    border-radius: 27px;
+    padding: 0.75rem;
+    position: absolute;
+    bottom: -4rem;
+    transition: none;
+    &:hover{
+        color: $White;
+        background-color: $Purple;
+        cursor: pointer;
+    }
+    body.dark & {
+        border-color: $Gray3;
+        background-color: $Gray4;
+        color: white;
+        &:hover{
+            color: rgba(255, 255, 255, 0.568);
+            background-color: gray;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: $Query) {
+    .search-results {
+        align-items: center;
+        width: 100vw;
+        h3 {
+            font-size: 25px;
+        }
+        .no-result {
+            font-size: 18px;
+        }
+        .gifU {
+            img {
+                width: 9rem;
+                height: 6.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1280px) {
+    .search-results{
+        width: 100vw;
+        .gifU {
+            img {
+                width: 16rem;
+                height: 11rem;
+            }
+            .gifHover {
+                width: 16rem;
+                height: 11rem;
+            }
+        }
+    }
+}

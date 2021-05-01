@@ -54,3 +54,158 @@
             top: 35%;
         }
 }
+
+.autocomplete {
+    width: 33.8rem;
+    border: 1pt solid $Purple;
+    border-top: none;
+    border-radius: 0 0 27px 27px;
+    list-style: none;
+    opacity: 60%;
+    body.dark & {
+        color: white;
+        border-color: gray;
+    }
+    li {
+        font-family: $Montserrat;
+        padding: 1rem;
+        p {
+            display: inline;
+            padding-left: 1rem;
+        }
+        
+        &:last-of-type{
+            border-radius: 0 0 27px 27px;
+            border-bottom: none;
+        }
+
+        &:hover{
+            background-color: rgba(173, 173, 173, 0.698);
+            cursor: pointer;
+        }
+    }
+}
+
+.nav-search-container {
+    align-self: center;
+    position: relative;
+    width: 25vw;
+    display: flex;
+    .nav-search-bar {
+        width: 100%;
+        font-family: $Roboto;
+        font-size: 16px;
+        color: $SemiLightGray;
+        border: 1pt solid $Purple;
+        border-radius: 27px;
+        padding: 0.75rem;
+        padding-left: 3.38rem;
+        body.dark & {
+            border-color: $SemiLightGray;
+            background-color: $Gray;
+        }
+        &:focus {
+            color: $Black;
+            outline: none;
+        }
+    }
+    .nav-searchIcon-purple {
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        width: 1.2em;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .nav-searchIcon-gray {
+        position: absolute;
+        left: 5%;
+        top: 25%;
+        filter: brightness(4);
+        filter: grayscale(1);
+        z-index: 8;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .nav-searchIcon-close {
+        position: absolute;
+        right: 5.25%;
+        top: 35%;
+    }
+}
+
+.gifU {
+    position: relative;
+    img {
+        width: 22rem;
+        height: 17rem;
+    }
+    .gifHover {
+        width: 22rem;
+        height: 17rem;
+        position: absolute;
+        top: 0;
+        z-index: 8;
+        background-color: $LightPurple;
+        cursor: grab;
+        //-----GIFINFO
+        p {
+            position: absolute;
+            left: 1rem;
+        }
+        .gif-user {
+            font-family: $Roboto;
+            font-weight: $Regular;
+            font-size: 15px;
+            color: $White;
+            bottom: 4rem;
+        }
+        .gif-title {
+            font-family: $Roboto;
+            font-weight: $Bold;
+            font-size: 16px;
+            color: $White;
+            bottom: 2rem;
+            max-height: 1em;
+            line-height: 1.2em;
+        }
+        .gif-buttonbar {
+            position: absolute;
+            right: 0;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img {
+                width: 4rem;
+                height: 4rem;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $Query) {
+    .search-container {
+        width: 90%;
+    }
+    .autocomplete{
+        width: 89%;
+    }
+    .gifU {
+        img {
+            width: 15rem;
+            height: 11rem;
+        }
+        .gifHover {
+            display: none;
+        }
+    }
+}

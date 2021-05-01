@@ -21,6 +21,7 @@ async function trendingSearchTags() {
         .catch(err => console.log(err))
 }
 
+//---------- CALL TRENDING GIFS ----------
 async function trendingGifs() {
     await fetch(api_trendingGif_endpoint + "?api_key=" + generated_api_key + "&limit=" + 9 + "&rating=g")
         .then(response => { return (response.json()) })
@@ -28,6 +29,29 @@ async function trendingGifs() {
             console.log(json);
             addTrendingGifs(json.data);
             postTrendingGifs(0);
+        })
+        .catch(err => console.log(err))
+}
+
+//---------- CALL SEARCH ----------
+async function userSearch(input) {
+    await fetch(api_search_endpoint + "?api_key=" + generated_api_key + "&q=" + input + "&limit=" + 12 + "&offset="+ (offsetS + 1) + "&rating=g")
+    .then(response => { return (response.json()) })
+        .then(json => {
+            console.log(json);
+            console.log(input)
+            userSearchedGifs(json.data, input);
+        })
+        .catch(err => console.log(err))
+}
+
+//---------- CALL AUTOCOMPLETE ----------
+async function suggest(input) {
+    await fetch(api_search_endpoint + "?api_key=" + generated_api_key + "&q=" + input + "&limit=" + 5 + "&rating=g")
+    .then(response => { return (response.json()) })
+        .then(json => {
+            console.log(json);
+            addSuggestions(json.data);
         })
         .catch(err => console.log(err))
 }

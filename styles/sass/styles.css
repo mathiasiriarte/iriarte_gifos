@@ -372,6 +372,129 @@ body.dark .search-trending-tags span:hover {
   }
 }
 
+.search-results {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-results hr {
+  color: #37383C;
+  width: 12rem;
+  margin-top: 3.5rem;
+}
+
+.search-results h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: #572EE5;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 3.5rem;
+  text-transform: capitalize;
+}
+
+body.dark .search-results h3 {
+  color: white;
+}
+
+.search-results .no-result {
+  font-weight: 700;
+  color: #50E3C2;
+  font-size: 22px;
+  text-transform: none;
+}
+
+.search-results .gifU {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.75em;
+}
+
+.search-results .gifU .gifHover {
+  top: 0.8em;
+  left: 0.75em;
+}
+
+.see-more {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #572EE5;
+  background-color: #ffffff;
+  border: 1pt solid #572EE5;
+  border-radius: 27px;
+  padding: 0.75rem;
+  position: absolute;
+  bottom: -4rem;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.see-more:hover {
+  color: #ffffff;
+  background-color: #572EE5;
+  cursor: pointer;
+}
+
+body.dark .see-more {
+  border-color: #9CAFC3;
+  background-color: #37383C;
+  color: white;
+}
+
+body.dark .see-more:hover {
+  color: rgba(255, 255, 255, 0.568);
+  background-color: gray;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .search-results {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+  }
+  .search-results h3 {
+    font-size: 25px;
+  }
+  .search-results .no-result {
+    font-size: 18px;
+  }
+  .search-results .gifU img {
+    width: 9rem;
+    height: 6.5rem;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1280px) {
+  .search-results {
+    width: 100vw;
+  }
+  .search-results .gifU img {
+    width: 16rem;
+    height: 11rem;
+  }
+  .search-results .gifU .gifHover {
+    width: 16rem;
+    height: 11rem;
+  }
+}
+
 .trending-gifos {
   background-color: #F3F5F8;
   margin-top: 6rem;
@@ -455,7 +578,7 @@ body.dark .trending-gifos-p {
           justify-content: space-evenly;
 }
 
-.trending-gifos-gifos-container .gifoHover {
+.trending-gifos-gifos-container .gifHover {
   left: 1rem;
 }
 
