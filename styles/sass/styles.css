@@ -200,7 +200,7 @@ body.dark .nav-search-container .nav-search-bar {
   height: 17rem;
 }
 
-.gifU .gifHover {
+.gifU .gif-hover {
   width: 22rem;
   height: 17rem;
   position: absolute;
@@ -211,12 +211,12 @@ body.dark .nav-search-container .nav-search-bar {
   cursor: grab;
 }
 
-.gifU .gifHover p {
+.gifU .gif-hover p {
   position: absolute;
   left: 1rem;
 }
 
-.gifU .gifHover .gif-user {
+.gifU .gif-hover .gif-user {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -224,7 +224,7 @@ body.dark .nav-search-container .nav-search-bar {
   bottom: 4rem;
 }
 
-.gifU .gifHover .gif-title {
+.gifU .gif-hover .gif-title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -234,7 +234,7 @@ body.dark .nav-search-container .nav-search-bar {
   line-height: 1.2em;
 }
 
-.gifU .gifHover .gif-buttonbar {
+.gifU .gif-hover .gif-buttonbar {
   position: absolute;
   right: 0;
   width: 3rem;
@@ -250,14 +250,14 @@ body.dark .nav-search-container .nav-search-bar {
           justify-content: flex-end;
 }
 
-.gifU .gifHover .gif-buttonbar img {
+.gifU .gif-hover .gif-buttonbar img {
   width: 4rem;
   height: 4rem;
   margin-right: 0.2rem;
   margin-left: 0.2rem;
 }
 
-.gifU .gifHover .gif-buttonbar img:hover {
+.gifU .gif-hover .gif-buttonbar img:hover {
   cursor: pointer;
 }
 
@@ -272,7 +272,7 @@ body.dark .nav-search-container .nav-search-bar {
     width: 15rem;
     height: 11rem;
   }
-  .gifU .gifHover {
+  .gifU .gif-hover {
     display: none;
   }
 }
@@ -607,7 +607,7 @@ body.dark .search-results h3 {
   padding: 0.75em;
 }
 
-.search-results .gifU .gifHover {
+.search-results .gifU .gif-hover {
   top: 0.8em;
   left: 0.75em;
 }
@@ -672,7 +672,7 @@ body.dark .see-more:hover {
     width: 16rem;
     height: 11rem;
   }
-  .search-results .gifU .gifHover {
+  .search-results .gifU .gif-hover {
     width: 16rem;
     height: 11rem;
   }
@@ -761,7 +761,7 @@ body.dark .trending-gifos-p {
           justify-content: space-evenly;
 }
 
-.trending-gifos-gifos-container .gifHover {
+.trending-gifos-gifos-container .gif-hover {
   left: 1rem;
 }
 
