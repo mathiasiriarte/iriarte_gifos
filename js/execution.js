@@ -233,8 +233,8 @@ function searchingOnNav() {
         if (document.documentElement.scrollTop > 500) {
         searchOnNav()
         } else {
-        search_nav.classList.add("hidden");
-        section_nav.style.borderBottom = "none";
+            search_nav.classList.add("hidden");
+            section_nav.style.borderBottom = "none";
         }
     }
 }
