@@ -233,7 +233,7 @@ function searchingOnNav() {
         if (document.documentElement.scrollTop > 500) {
         searchOnNav()
         } else {
-        section_nav.classList.add("hidden");
+        search_nav.classList.add("hidden");
         section_nav.style.borderBottom = "none";
         }
     }
@@ -244,7 +244,6 @@ function searchOnNav() {
     if (input_search.value != "") {
         searchBar_nav.value = input_search.value;
     }
-    section_nav.style.borderBottom = "1pt solid black";
 }
 
 window.addEventListener('scroll', searchingOnNav);
