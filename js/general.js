@@ -13,7 +13,7 @@ const searchBar_nav = document.querySelector(".nav-search-bar");
 const nav_purple_magnifyingGlass = document.querySelector(".nav-searchIcon-purple");
 const nav_gray_magnifyingGlass = document.querySelector(".nav-searchIcon-gray");
 const nav_search_close = document.querySelector(".nav-search-close");
-const hamburguer = document.querySelector(".hamburguer-nav");
+const hamburguer = document.querySelector(".nav-container-hamburger");
 const ul_nav = document.querySelector(".nav-container-items");
 const ul_li_nav = document.querySelectorAll(".nav-container-items li");
 //---------- LINKS ----------
@@ -70,15 +70,15 @@ hamburguer.addEventListener("click", () => {
     } else {
         hamburguer.src = "imgs/close-modo-noct.svg";
     }
-} else {
-    ul_nav.style.display = "none";
-    hamburgerMenu_open = false;
-    if (darkMode_enabled == false) {
-        hamburguer.src = "imgs/burger.svg";
     } else {
-        hamburguer.src = "imgs/burger-modo-noct.svg";
-    }
-}
+            ul_nav.style.display = "none";
+            hamburgerMenu_open = false;
+            if (darkMode_enabled == false) {
+                hamburguer.src = "imgs/burger.svg";
+            } else {
+                hamburguer.src = "imgs/burger-modo-noct.svg";
+            }
+        }
 });
 
 favorites_link.addEventListener("click", () => {
