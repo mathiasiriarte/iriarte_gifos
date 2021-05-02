@@ -138,9 +138,14 @@ maximizeGif_section.querySelector(".close-maximized").addEventListener("click", 
 });
 
 //----- DOWNLOAD GIF FUNCTION -----
-async function downloadGif(url, title) {
-    let blob = await fetch(url).then(img => img.blob());
-    saveGif(blob, title + ".gifU");
+async function downloadGif(url, title){
+    let a = document.createElement("a");
+    let source = await fetch (url);
+    let file = await source.blob();
+    a.download=title + ".gif";
+    a.href=window.URL.createObjectURL(file);
+    a.dataset.downloadurl=['application/octet-stream', a.download, a.href].join(':');
+    a.click();
 }
 
 //--------------- TRENDING SEARCH TAGS ---------------
@@ -171,7 +176,7 @@ function postTrendingGifs(offset) {
     trendingGifs_container.innerHTML = "";
     for (let i = offset; i < offset + 3; i++) {
         gifContainer = document.createElement("div");
-        gifContainer.classList.add("giff");
+        gifContainer.classList.add("gifU");
         gifContainer.innerHTML = `<img src="${trendingGifs_array[i].url}" alt="${trendingGifs_array[i].title}">
             <div class="gif-hover hidden">
                 <div class="gif-buttonbar">
@@ -208,7 +213,7 @@ function addSuggestions(array) {
         iterations = 0;
         offsetS = 0;
         search_section.innerHTML = "";
-        searchedGifs_array = [];
+        searchedGifsArray = [];
         search_section.classList.remove("hidden");
         search_section.scrollIntoView()
         })
@@ -277,7 +282,7 @@ function startSearch() {
         iterations = 0;
         offsetS = 0;
         search_section.innerHTML = "";
-        searchedGifs_array = [];
+        searchedGifsArray = [];
         deactivateSearch();
         search_section.classList.remove("hidden");
         userSearch(input_search.value);
@@ -293,16 +298,16 @@ function userSearchedGifs(array, input) {
         array[i].title,
         array[i].images.original.url
         );
-        searchedGifs_array.push(newGif);
+        searchedGifsArray.push(newGif);
     }
-    printSearchedGifs(searchedGifs_array, input);
+    printSearchedGifs(searchedGifsArray, input);
 }
 
 function printSearchedGifs(array, input) {
     console.log(input)
     if (offsetS == 0) {
         search_section.innerHTML = " ";
-        searchedGifs_array = [];
+        searchedGifsArray = [];
         hr = document.createElement("hr");
         search_section.appendChild(hr);
         h3 = document.createElement("h3");
@@ -319,7 +324,7 @@ function printSearchedGifs(array, input) {
 
     for (let i = 0; i < array.length; i++) {
         div = document.createElement("div");
-        div.classList.add("giff");
+        div.classList.add("gifU");
         div.innerHTML = `<img src="${array[i].url}" alt="gif" class="giff2 trending-giff">
         <div class="gif-hover hidden">
             <div class="gif-buttonbar">

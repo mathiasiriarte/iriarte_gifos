@@ -3,7 +3,7 @@ var hamburgerMenu_open = false;
 var carouselOffset = 0;
 var offsetS = 0;
 var trendingGifs_array = [];
-var searchedGifs_array = [];
+var searchedGifsArray = [];
 var iterations = 0;
 //---------- NAV ----------
 const section_nav = document.querySelector(".nav");
@@ -103,11 +103,11 @@ retrieveFavs();
 
 function addTagListeners() {
     for (let i = 0; i < 5; i++) {
-    popular_tags.querySelectorAll(".trending-tag")[i].addEventListener("click", () => {
-        input_search.value = popular_tags.querySelectorAll(".trending-tag")[i].innerHTML;
-        searchBar_nav.value = popular_tags.querySelectorAll(".trending-tag")[i].innerHTML;
-        startSearch();
-    })
+        popular_tags.querySelectorAll(".trending-tag")[i].addEventListener("click", () => {
+            input_search.value = popular_tags.querySelectorAll(".trending-tag")[i].innerHTML;
+            searchBar_nav.value = popular_tags.querySelectorAll(".trending-tag")[i].innerHTML;
+            startSearch();
+        })
     }
 }
 //------------------ SEARCH ------------------
@@ -124,6 +124,7 @@ nav_purple_magnifyingGlass.addEventListener("click", () => {
     input_search.value = searchBar_nav.value;
     startSearch();
 });
+
 searchBar_nav.addEventListener("keypress", (input) => {
     if (input.charCode === 13) {
         input_search.value = searchBar_nav.value;
@@ -133,13 +134,13 @@ searchBar_nav.addEventListener("keypress", (input) => {
 
 input_search.addEventListener("focus", () => { searching() });
 searchIcon_gray.addEventListener("click", () => { startSearch() });
-cancel_search.addEventListener("click", () => { searchDisable(); input_search.value = ""; searchBar_nav.value = ""; SearchSection.innerHTML = ""; });
+cancel_search.addEventListener("click", () => { deactivateSearch(); input_search.value = ""; searchBar_nav.value = ""; results_search.innerHTML = ""; });
 
 nav_gray_magnifyingGlass.addEventListener("click", () => {
     input_search.value = searchBar_nav.value;
     startSearch();
 });
-nav_search_close.addEventListener("click", () => { searchDisable(); input_search.value = ""; searchBar_nav.value = ""; SearchSection.innerHTML = ""; });
+nav_search_close.addEventListener("click", () => { deactivateSearch(); input_search.value = ""; searchBar_nav.value = ""; results_search.innerHTML = ""; });
 
 //---------- TRENDING SECTION ----------
 trendingRightArrow.addEventListener("click", () => {
@@ -148,7 +149,7 @@ trendingRightArrow.addEventListener("click", () => {
     } else {
         carouselOffset = 0;
     }
-    printTrendingGifs(carouselOffset)
+    postTrendingGifs(carouselOffset)
 });
 
 trendingRightArrow.addEventListener("mouseover", () => {
@@ -169,7 +170,7 @@ trendingLeftArrow.addEventListener("click", () => {
     } else {
         carouselOffset = 6;
     }
-printTrendingGifs(carouselOffset)
+postTrendingGifs(carouselOffset)
 });
 
 trendingLeftArrow.addEventListener("mouseover", () => {
