@@ -967,7 +967,7 @@ body.dark .favs h4 {
   text-align: center;
 }
 
-.volver {
+.back {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -982,19 +982,19 @@ body.dark .favs h4 {
   margin-bottom: 1.65rem;
 }
 
-.volver:hover {
+.back:hover {
   color: #ffffff;
   background-color: #572EE5;
   cursor: pointer;
 }
 
-body.dark .volver {
+body.dark .back {
   border-color: #9CAFC3;
   background-color: #37383C;
   color: white;
 }
 
-body.dark .volver:hover {
+body.dark .back:hover {
   color: rgba(255, 255, 255, 0.568);
   background-color: gray;
   cursor: pointer;

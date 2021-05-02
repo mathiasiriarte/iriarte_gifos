@@ -33,8 +33,8 @@ function FAVGIFINFO(index, author, title, url) {
 function renderFavGifos() {
     favoriteGifs_section.innerHTML = `<img src="imgs/icon-favoritos.svg" alt="Favoritos"> 
     <h4>Favoritos</h4>
-    <button class="volver">VOLVER</button>`;
-    document.querySelector(".volver").addEventListener("click", () => {
+    <button class="back">VOLVER</button>`;
+    document.querySelector(".back").addEventListener("click", () => {
         maximizeGif_section.classList.add("hidden");
         searchS.classList.remove("hidden");
         favoriteGifs_section.classList.add("hidden");
