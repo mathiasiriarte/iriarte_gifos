@@ -245,7 +245,7 @@ function searchingOnNav() {
 }
 
 function searchOnNav() {
-    section_nav.classList.remove("hidden");
+    search_nav.classList.remove("hidden");
     if (input_search.value != "") {
         searchBar_nav.value = input_search.value;
     }
