@@ -1,0 +1,86 @@
+.favs {
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        font-size: 25px;
+        color: $Purple;
+        width: fit-content;
+        display: block;
+        body.dark & {
+            color: white;
+        }
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .gifU {
+        width: fit-content;
+        padding: 0.75em;
+            .gif-hover {
+                top: 0.8em;
+                left: 0.75em;
+            }
+        }
+    }
+    .no-result {
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        color: $Limegreen;
+        font-size: 22px;
+        text-transform: none;
+        margin-top: 2.5rem;
+        width: 70%;
+        text-align: center;
+    }
+}
+
+.volver{
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        font-size: 13px;
+        color: $Purple;
+        background-color: $White;
+        border: 1pt solid $Purple;
+        border-radius: 27px;
+        padding: 0.75rem;
+        transition: none;
+        margin-top: 2rem;
+        margin-bottom: 1.65rem;
+    &:hover{
+        color: $White;
+        background-color: $Purple;
+        cursor: pointer;
+    }
+    body.dark & {
+        border-color: $Gray3;
+        background-color: $Gray4;
+        color: white;
+        &:hover {
+            color: rgba(255, 255, 255, 0.568);
+            background-color: gray;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: $Query) {
+    .container {
+        align-items: center;
+        width: 100vw;
+        .no-result{
+            font-size: 18px;
+        }
+        .gifU {
+            img {
+            width: 9rem;
+            height: 6.5rem;
+            }
+        }
+    }
+}

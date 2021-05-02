@@ -21,6 +21,7 @@ const darkMode_toggle = document.getElementById("btnDarkMode");
 const favorites_link = document.getElementById("btnFav");
 const myGifs_link = document.getElementById("btnMyGifs");
 //---------- SEARCH SECTION ----------
+const searchS = document.querySelector(".search");
 const search_section = document.querySelector(".search-section");
 const popular_tags = document.querySelector(".search-trending-tags");
 const input_search = document.querySelector(".searchbar");
@@ -82,10 +83,11 @@ hamburguer.addEventListener("click", () => {
 });
 
 favorites_link.addEventListener("click", () => {
-    search_section.classList.add("hidden")
+    searchS.classList.add("hidden")
     favoriteGifs_section.classList.remove("hidden")
     maximizeGif_section.classList.add("hidden");
-    create-section.classList.add("hidden");
+    //!!!!!!!!!!  ↓↓↓↓  !!!!!!!!!!
+    create_section.classList.add("hidden");
     myGifs_section.classList.add("hidden");
     trendingGifs_section.classList.remove("hidden");
     if (hamburgerMenu_open == true) {

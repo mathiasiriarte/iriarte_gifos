@@ -66,7 +66,7 @@ function gifEventListeners(selected) {
 function addGifButtons(selected) {
     let buttons = selected.querySelectorAll(".gif-buttonbar img");
     buttons[0].addEventListener("click", () => {
-        favItem = new FAVGIFO(array_favorites.length, selected.querySelector(".gif-title").innerHTML, selected.querySelector(".gif-user").innerHTML, selected.querySelector("img").src);
+        favItem = new FAVGIFINFO(favoritesArray.length, selected.querySelector(".gif-title").innerHTML, selected.querySelector(".gif-user").innerHTML, selected.querySelector("img").src);
         buttons[0].src = "imgs/icon-fav-active.svg";
     })
     buttons[1].addEventListener("click", () => {
@@ -106,12 +106,12 @@ function maximizeGif(selected) {
     maximizeGif_section.querySelector(".username").innerHTML = userName;
     maximizeGif_section.querySelector(".gifU").src = url;
     maximizeGif_section.classList.remove("hidden");
-    search_section.classList.add("hidden");
+    searchS.classList.add("hidden");
     favoriteGifs_section.classList.add("hidden");
     window.scrollTo(0, 0);
     let buttons = maximizeGif_section.querySelectorAll(".maximized-container img");
     buttons[0].addEventListener("click", () => {
-        favItem = new FAVGIFO(array_favorites.length, userName, title, url);
+        favItem = new FAVGIFINFO(favoritesArray.length, userName, title, url);
         buttons[0].src = "imgs/icon-fav-active.svg";
     })
     buttons[0].addEventListener("mouseover", () => {
@@ -133,7 +133,7 @@ function maximizeGif(selected) {
 
 maximizeGif_section.querySelector(".close-maximized").addEventListener("click", () => {
     maximizeGif_section.classList.add("hidden");
-    search_section.classList.remove("hidden");
+    searchS.classList.remove("hidden");
     favoriteGifs_section.classList.add("hidden");
 });
 
