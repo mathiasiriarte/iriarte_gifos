@@ -11,7 +11,7 @@ retrieveFavs();
 function favSelected(item) {
     favoritesArray.push(item);
     localStorage.setItem("FAVORITEGIFS", JSON.stringify(favoritesArray));
-    renderFavGifos();
+    displayFavGifs();
 }
     //*CONSTRUCT FAV GIFOS
 function FAVGIFINFO(index, author, title, url) {
@@ -30,8 +30,8 @@ function FAVGIFINFO(index, author, title, url) {
     return this;
 }
     //*RENDER GIFOS
-function renderFavGifos() {
-    favoriteGifs_section.innerHTML = `<img src="imgs/icon-favoritos.svg" alt="Favoritos"> 
+function displayFavGifs() {
+    favoriteGifs_section.innerHTML = `<img src="imgs/icon-favoritos.svg" alt="Favorites"> 
     <h4>Favoritos</h4>
     <button class="back">VOLVER</button>`;
     document.querySelector(".back").addEventListener("click", () => {
@@ -43,7 +43,7 @@ function renderFavGifos() {
     if (favoritesArray.length == 0) {
         div = document.createElement("div");
         div.style = "display:flex; flex-direction: column; align-items: center; margin-top: 4rem"
-        div.innerHTML = `<img src="imgs/icon-fav-sin-contenido.svg" alt="Sin gifos">
+        div.innerHTML = `<img src="imgs/icon-fav-sin-contenido.svg" alt="No gifs saved">
     <p class="no-result">¡Guarda tu primer GIFO en Favoritos 
     para que se muestre aquí!</p>`;
         favoriteGifs_section.appendChild(div);
@@ -86,7 +86,7 @@ function renderFavGifos() {
                 console.log("Borrando GIFO: " + gifoo.querySelector(".gifo-title").innerHTML)
                 favoritesArray.splice(i, 1);
                 localStorage.setItem("FAVORITEGIFS", JSON.stringify(favoritesArray));
-                renderFavGifos();
+                displayFavGifs();
             })
             //download
             buttons[1].addEventListener("click", () => {
@@ -121,4 +121,4 @@ function renderFavGifos() {
         }
     }
 }
-renderFavGifos();
+displayFavGifs();
