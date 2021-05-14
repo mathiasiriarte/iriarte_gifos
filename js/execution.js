@@ -58,13 +58,14 @@ function gifEventListeners(selected) {
     });
     if (window.matchMedia("(max-width: 1000px)").matches) {
         selected.addEventListener("click", () => {
-        maximizeGif(selected);
+            maximizeGif(selected);
         });
     }
 }
 
 function addGifButtons(selected) {
     let buttons = selected.querySelectorAll(".gif-buttonbar img");
+    console.log("Added gif to favorite: " + selected.querySelector(".gif-title").innerHTML)
     buttons[0].addEventListener("click", () => {
         favItem = new FAVGIFINFO(favoritesArray.length, selected.querySelector(".gif-title").innerHTML, selected.querySelector(".gif-user").innerHTML, selected.querySelector("img").src);
         buttons[0].src = "imgs/icon-fav-active.svg";
@@ -102,6 +103,7 @@ function maximizeGif(selected) {
     let userName = selected.querySelector(".gif-user").innerHTML;
     let title = selected.querySelector(".gif-title").innerHTML;
     let url = selected.querySelector("img").src;
+    console.log("Maximizing gif: " + title);
     maximizeGif_section.querySelector(".title").innerHTML = title;
     maximizeGif_section.querySelector(".username").innerHTML = userName;
     maximizeGif_section.querySelector(".gifU").src = url;
@@ -111,6 +113,7 @@ function maximizeGif(selected) {
     window.scrollTo(0, 0);
     let buttons = maximizeGif_section.querySelectorAll(".maximized-container img");
     buttons[0].addEventListener("click", () => {
+        console.log("Added gif to favorite: " + selected.querySelector(".gif-title").innerHTML)
         favItem = new FAVGIFINFO(favoritesArray.length, userName, title, url);
         buttons[0].src = "imgs/icon-fav-active.svg";
     })
@@ -205,17 +208,16 @@ function addSuggestions(array) {
         li.innerHTML = `<img src="../../imgs/icon-search.svg" class="suggest-button"></img><p>${array[i].title}</p>`;
         autocomplete_suggest.appendChild(li);
         li.addEventListener("click", () => {
-        input_search.value = array[i].title;
-        userSearch(array[i].title);
-        hideSuggestions();
-        deactivateSearch();
-        
-        iterations = 0;
-        offsetS = 0;
-        search_section.innerHTML = "";
-        searchedGifsArray = [];
-        search_section.classList.remove("hidden");
-        search_section.scrollIntoView()
+            input_search.value = array[i].title;
+            userSearch(array[i].title);
+            hideSuggestions();
+            deactivateSearch();
+            iterations = 0;
+            offsetS = 0;
+            search_section.innerHTML = "";
+            searchedGifsArray = [];
+            search_section.classList.remove("hidden");
+            search_section.scrollIntoView()
         })
     }
 }
@@ -325,7 +327,7 @@ function printSearchedGifs(array, input) {
     for (let i = 0; i < array.length; i++) {
         div = document.createElement("div");
         div.classList.add("gifU");
-        div.innerHTML = `<img src="${array[i].url}" alt="gif" class="giff2 trending-giff">
+        div.innerHTML = `<img src="${array[i].url}" alt="gif" class="gifU trending-giff">
         <div class="gif-hover hidden">
             <div class="gif-buttonbar">
                 <img src="imgs/icon-fav.svg" class="fav" alt="Favorite button">

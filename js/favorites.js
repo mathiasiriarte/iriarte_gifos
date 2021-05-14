@@ -83,7 +83,7 @@ function displayFavGifs() {
             //!CLICK LISTENERS
             //fav
             buttons[0].addEventListener("click", () => {
-                console.log("Borrando GIFO: " + gifoo.querySelector(".gifo-title").innerHTML)
+                console.log("Deleting gif: " + gifoo.querySelector(".gif-title").innerHTML)
                 favoritesArray.splice(i, 1);
                 localStorage.setItem("FAVORITEGIFS", JSON.stringify(favoritesArray));
                 displayFavGifs();

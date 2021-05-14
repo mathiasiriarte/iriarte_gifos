@@ -100,7 +100,7 @@ favorites_link.addEventListener("click", () => {
     } else {
         hamburguer.src = "imgs/burger-modo-noct.svg";
     }
-retrieveFavs();
+    retrieveFavs();
 })
 
 function addTagListeners() {
