@@ -86,7 +86,6 @@ favorites_link.addEventListener("click", () => {
     searchS.classList.add("hidden")
     favoriteGifs_section.classList.remove("hidden")
     maximizeGif_section.classList.add("hidden");
-    //!!!!!!!!!!  ↓↓↓↓  !!!!!!!!!!
     create_section.classList.add("hidden");
     myGifs_section.classList.add("hidden");
     trendingGifs_section.classList.remove("hidden");

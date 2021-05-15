@@ -1,0 +1,167 @@
+.create-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    .my-gifo {
+        display: flex;
+        margin: 0;
+        margin-top: 9rem;
+        justify-content: center;
+        height: fit-content;
+        width: 100vw;
+        .create-window {
+            position: relative;
+            border: 2pt solid $Purple;
+            display: inline-block;
+            width: 60rem;
+            height: 34rem;
+            align-items: center;
+            justify-content: center;
+            .text-container {
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2 {
+                    width: 50%;
+                    font-family: $Montserrat;
+                    font-weight: $Bold;
+                    font-size: 35px;
+                    text-align: center;
+                    color: $Purple;
+                    body.dark & {
+                        color: white;
+                    }
+                    span {
+                        color: $Limegreen;
+                    }
+                }
+                p {
+                    margin-top: 2rem;
+                    font-family: $Roboto;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 29px;
+                    body.dark & {
+                        color: white;
+                    }
+                }
+            }
+            .create-overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $LightPurple;
+                width: 100%;
+                height: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p {
+                    color: $White;
+                    font-family: $Montserrat;
+                    font-weight: $Bold;
+                }
+            }
+        }
+        video{
+            width:100%;
+            height: inherit;
+        }
+    }
+    .steps {
+        width: 15vw;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+        p {
+            margin-top: 1rem;
+            font-family: $Roboto;
+            font-weight: $Medium;
+            font-size: 18px;
+            color: $Purple;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+            border: 1pt solid $Purple;
+            border-radius: 30px;
+            body.dark & {
+                color: white;
+            }
+        }
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1em;
+        width: 60%;
+        height: 4pt;
+        background-color: $Purple;
+        border: none;
+    }
+    .start-btn {
+        font-family: $Montserrat;
+        font-weight: $Bold;
+        font-size: 17px;
+        color: $Purple;
+        background-color: $White;
+        border: 1pt solid $Purple;
+        border-radius: 27px;
+        padding: 0.75rem;
+        transition: none;
+        margin-bottom: 1.65rem;
+        &:hover {
+            color: $White;
+            background-color: $Purple;
+            cursor: pointer;
+        }
+        body.dark & {
+            border-color: $Gray3;
+            background-color: $Gray4;
+            color: white;
+            &:hover {
+                color: rgba(255, 255, 255, 0.568);
+                background-color: gray;
+                cursor: pointer;
+            }
+        }
+    }
+    .camera-container {
+            position: relative;
+            width: 16rem;
+            height: 16rem;
+            margin-left: 3rem;
+            .camera,
+            .tape,
+            .tape2,
+            .light {
+                position: absolute;
+            }
+            .camera {
+                bottom: 0;
+                z-index: 1;
+                left: 0;
+            }
+            .light {
+                bottom: 3.5rem;
+                left: 181px;
+            }
+            .tape1 {
+                left: 0.2rem;
+                top: 2rem;
+                z-index: 2;
+            }
+            .tape2 {
+                left: 4.5rem;
+                top: 0.6rem;
+                z-index: 2;
+            }
+    }
+    .test {
+        width: 19rem;
+    }
+}

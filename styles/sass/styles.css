@@ -1016,6 +1016,242 @@ body.dark .back:hover {
   }
 }
 
+.create-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+}
+
+.create-section .my-gifo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  margin-top: 9rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+}
+
+.create-section .my-gifo .create-window {
+  position: relative;
+  border: 2pt solid #572EE5;
+  display: inline-block;
+  width: 60rem;
+  height: 34rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create-section .my-gifo .create-window .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-section .my-gifo .create-window .text-container h2 {
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  color: #572EE5;
+}
+
+body.dark .create-section .my-gifo .create-window .text-container h2 {
+  color: white;
+}
+
+.create-section .my-gifo .create-window .text-container h2 span {
+  color: #50E3C2;
+}
+
+.create-section .my-gifo .create-window .text-container p {
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 29px;
+}
+
+body.dark .create-section .my-gifo .create-window .text-container p {
+  color: white;
+}
+
+.create-section .my-gifo .create-window .create-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #562ee5b2;
+  width: 100%;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create-section .my-gifo .create-window .create-overlay p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.create-section .my-gifo video {
+  width: 100%;
+  height: inherit;
+}
+
+.create-section .steps {
+  width: 15vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.create-section .steps p {
+  margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #572EE5;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  border: 1pt solid #572EE5;
+  border-radius: 30px;
+}
+
+body.dark .create-section .steps p {
+  color: white;
+}
+
+.create-section hr {
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  width: 60%;
+  height: 4pt;
+  background-color: #572EE5;
+  border: none;
+}
+
+.create-section .start-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: #572EE5;
+  background-color: #ffffff;
+  border: 1pt solid #572EE5;
+  border-radius: 27px;
+  padding: 0.75rem;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 1.65rem;
+}
+
+.create-section .start-btn:hover {
+  color: #ffffff;
+  background-color: #572EE5;
+  cursor: pointer;
+}
+
+body.dark .create-section .start-btn {
+  border-color: #9CAFC3;
+  background-color: #37383C;
+  color: white;
+}
+
+body.dark .create-section .start-btn:hover {
+  color: rgba(255, 255, 255, 0.568);
+  background-color: gray;
+  cursor: pointer;
+}
+
+.create-section .camera-container {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  margin-left: 3rem;
+}
+
+.create-section .camera-container .camera,
+.create-section .camera-container .tape,
+.create-section .camera-container .tape2,
+.create-section .camera-container .light {
+  position: absolute;
+}
+
+.create-section .camera-container .camera {
+  bottom: 0;
+  z-index: 1;
+  left: 0;
+}
+
+.create-section .camera-container .light {
+  bottom: 3.5rem;
+  left: 181px;
+}
+
+.create-section .camera-container .tape1 {
+  left: 0.2rem;
+  top: 2rem;
+  z-index: 2;
+}
+
+.create-section .camera-container .tape2 {
+  left: 4.5rem;
+  top: 0.6rem;
+  z-index: 2;
+}
+
+.create-section .test {
+  width: 19rem;
+}
+
 .my-gifs {
   margin-top: 9rem;
   display: -webkit-box;
