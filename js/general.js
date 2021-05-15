@@ -154,7 +154,7 @@ trendingRightArrow.addEventListener("click", () => {
 });
 
 trendingRightArrow.addEventListener("mouseover", () => {
-    trendingRightArrow.src = "imgs/button-slider-right-hover.svg"
+    trendingRightArrow.src = "imgs/Button-Slider-right-hover.svg"
 });
 
 trendingRightArrow.addEventListener("mouseout", () => {
