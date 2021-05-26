@@ -82,7 +82,7 @@ async function getStreamAndRecord() {
                                 overlay.querySelector("img").src = "imgs/ok.svg";
                                 overlay.querySelector("p").innerHTML = "GIFO subido con éxito. Si quieres subir otro GIFO, recarga la página";
                                 setTimeout(() => {
-                                    takeUserToMyGifos();
+                                    goToMyGifs();
                                 }, 2500);
                             })
                     }

@@ -45,7 +45,7 @@ function recoverDarkMode() {
     } else {
         darkMode_enabled = true;
     }
-enableDarkMode();
+  enableDarkMode();
 }
 recoverDarkMode();
 
@@ -133,7 +133,7 @@ function maximizeGif(selected) {
         buttons[1].src = "imgs/icon-download.svg";
     });
 }
-
+// -----CLOSE GIF
 maximizeGif_section.querySelector(".close-maximized").addEventListener("click", () => {
     maximizeGif_section.classList.add("hidden");
     searchS.classList.remove("hidden");
@@ -156,7 +156,7 @@ function generateTrendingTags(array) {
     popular_tags.innerHTML = "";
     for (let i = 0; i < 5; i++) {
         let trendTag = document.createElement("span");
-        trendTag.classList.add("trending_tag");
+        trendTag.classList.add("trending-tag");
         trendTag.innerHTML = array[i];
         popular_tags.appendChild(trendTag);
     }
@@ -214,10 +214,10 @@ function addSuggestions(array) {
             deactivateSearch();
             iterations = 0;
             offsetS = 0;
-            search_section.innerHTML = "";
+            results_search.innerHTML = "";
             searchedGifsArray = [];
-            search_section.classList.remove("hidden");
-            search_section.scrollIntoView()
+            results_search.classList.remove("hidden");
+            results_search.scrollIntoView()
         })
     }
 }
@@ -275,18 +275,18 @@ function deactivateSearch() {
     nav_purple_magnifyingGlass.classList.remove("hidden");
     nav_search_close.classList.add("hidden");
     nav_gray_magnifyingGlass.classList.add("hidden");
-    search_section.classList.add("hidden");
+    results_search.classList.add("hidden");
 }
 
 function startSearch() {
     if (input_search.value != "") {
-        search_section.scrollIntoView()
+        results_search.scrollIntoView()
         iterations = 0;
         offsetS = 0;
-        search_section.innerHTML = "";
+        results_search.innerHTML = "";
         searchedGifsArray = [];
         deactivateSearch();
-        search_section.classList.remove("hidden");
+        results_search.classList.remove("hidden");
         userSearch(input_search.value);
     }
 }
@@ -308,20 +308,20 @@ function userSearchedGifs(array, input) {
 function printSearchedGifs(array, input) {
     console.log(input)
     if (offsetS == 0) {
-        search_section.innerHTML = " ";
+        results_search.innerHTML = " ";
         searchedGifsArray = [];
         hr = document.createElement("hr");
-        search_section.appendChild(hr);
+        results_search.appendChild(hr);
         h3 = document.createElement("h3");
         h3.innerHTML = input;
-        search_section.appendChild(h3);
+        results_search.appendChild(h3);
     }
 
     if (array.length == 0) {
         noRes = document.createElement("div");
         noRes.style = "display:flex; flex-flow: column;";
         noRes.innerHTML = `<img src="imgs/icon-busqueda-sin-resultado.svg"> <h3 class="no-result">Intenta con otra búsqueda.</h3>`;
-        search_section.appendChild(noRes);
+        results_search.appendChild(noRes);
     }
 
     for (let i = 0; i < array.length; i++) {
@@ -336,7 +336,7 @@ function printSearchedGifs(array, input) {
             </div>
             <p class="gif-user">${array[i].author}</p>
             <p class="gif-title">${array[i].title}</p>`;
-        search_section.appendChild(div);
+        results_search.appendChild(div);
         gifEventListeners(div);
         addGifButtons(div);
     }
@@ -360,6 +360,6 @@ function printSearchedGifs(array, input) {
             offsetS = offsetS + 12;
             userSearch(input_search.value);
         });
-        search_section.append(button);
+        results_search.append(button);
     }
 }
