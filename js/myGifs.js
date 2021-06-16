@@ -29,7 +29,7 @@ function goToMyGifs() {
     create_section.classList.add("hidden");
     searchS.classList.add("hidden");
     maximizeGif_section.classList.add("hidden");
-    search_section.classList.add("hidden");
+    results_search.classList.add("hidden");
     trendingGifs_section.classList.remove("hidden");
     printOwnGifs();
 }
